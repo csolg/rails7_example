@@ -1,0 +1,19 @@
+require: 
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-capybara
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.2
+  SuggestExtensions:
+    rubocop-rake: true
+    rubocop-rails: true
+  Exclude:
+    - 'bin/bundle'
+
+Style/Documentation:
+  Enabled: false
+
+Lint/MissingSuper:
+  Enabled: false
