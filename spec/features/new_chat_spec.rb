@@ -8,7 +8,7 @@ feature 'Chat' do
     click_link 'New chat'
     expect(page).to have_content('Name')
 
-    fill_in "Name",	with: "Qwerty" 
+    fill_in 'Name',	with: 'Qwerty'
     click_button 'Create Chat'
     expect(Chat.count).to eq(1)
   end
