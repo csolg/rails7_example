@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-feature 'Chat' do
+feature 'Chat', :js do
   scenario 'Create a new chat' do
     visit '/'
     click_link 'New chat'
