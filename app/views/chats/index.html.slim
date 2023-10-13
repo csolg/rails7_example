@@ -1,11 +1,15 @@
 p style="color: green" = notice
 
-h1 Chats
+= turbo_stream_from "chats"
 
-#chats
-  - @chats.each do |chat|
-    == render chat
-    p
-      = link_to "Show this chat", chat
+main.container
+  .header
+    h1 Chats
+    = link_to "New chat", new_chat_path, class: "btn btn-primary", data: { turbo_frame: dom_id(Chat.new) }
 
-= link_to "New chat", new_chat_path
+  p
+    = turbo_frame_tag Chat.new
+
+  p#chats
+    = render @chats
+

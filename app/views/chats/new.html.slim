@@ -1,6 +1,7 @@
 h1 New chat
 
-== render "form", chat: @chat
+= turbo_frame_tag Chat.new
+  == render "form", chat: @chat
 
 br
 

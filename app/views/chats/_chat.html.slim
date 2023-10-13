@@ -1,4 +1,6 @@
-div id="#{dom_id chat}"
-  p
-    strong Name:
-    =< chat.name
+= turbo_frame_tag chat
+  div id="#{dom_id chat}"
+    p
+      = link_to chat.name, chat
+      / |<> |
+      / = link_to 'edit', edit_chat_path(chat)
