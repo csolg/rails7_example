@@ -3,5 +3,5 @@
 class Chat < ApplicationRecord
   has_many :messages, dependent: :destroy
 
-  after_create_commit -> { broadcast_prepend_to "chats" }
+  after_create_commit -> { broadcast_prepend_to 'chats' }
 end
