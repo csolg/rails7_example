@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-feature 'Chat', js: true do
+feature 'Chat', :js do
   let(:chat_name) { 'Chat321' }
   let(:message) { 'Message123' }
 
